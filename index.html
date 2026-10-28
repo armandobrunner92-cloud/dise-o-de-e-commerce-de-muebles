@@ -2,11 +2,11 @@
 <html lang="es"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Fábrica a tu Casa · MVP Maderas del Norte</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"></head><body>
-<header class="top"><div class="hd"><div class="brand"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="#c9f26b"/><circle cx="16" cy="16" r="9" fill="none" stroke="#0b3d2e" stroke-opacity=".6" stroke-width="1.6"/><circle cx="16" cy="16" r="4" fill="none" stroke="#0b3d2e" stroke-opacity=".6" stroke-width="1.6"/></svg><div><b>Maderas del Norte</b><span>Fábrica a tu Casa · MVP</span></div></div><nav><button class="tab on" onclick="go(0)">Tienda</button><button class="tab" onclick="go(1)">Automatización</button><button class="tab" onclick="go(2)">Panel y QR</button><button class="tab" onclick="go(3)">App móvil</button></nav></div></header>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;800&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"></head><body>
+<header class="top"><div class="hd"><div class="brand"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="#c9f26b"/><circle cx="16" cy="16" r="9" fill="none" stroke="#0b3d2e" stroke-opacity=".6" stroke-width="1.6"/><circle cx="16" cy="16" r="4" fill="none" stroke="#0b3d2e" stroke-opacity=".6" stroke-width="1.6"/></svg><div><b>Maderas del Norte</b><span>Fábrica a tu Casa · MVP</span></div></div><nav><button class="tab on" data-m="c" onclick="go(0)">Tienda</button><button class="tab" data-m="d" onclick="go(1)">Automatización</button><button class="tab" data-m="d" onclick="go(2)">Panel y QR</button><button class="tab" data-m="c" onclick="go(3)">App móvil</button></nav><button id="md" class="own">Ingresar como dueño</button></div></header>
 <main>
 <section class="sec" id="s0">
-<div class="hero"><div><span class="eq">Equivale a: plataforma e-commerce + pasarela de pago</span><h2>Muebles de pino y eucalipto, directo de fábrica</h2><p>Elegí, pagá y recibí en la fecha y franja que prefieras.</p><button class="go" onclick="document.getElementById('grid').scrollIntoView({behavior:'smooth'})">Ver catálogo</button></div><figure class="hf"><img src="img/mesa-comedor.jpg" alt="Mesa de comedor de eucalipto" onerror="this.remove()"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="22" width="52" height="6" rx="2"/><path d="M12 28v22M52 28v22M24 28v14M40 28v14"/></svg><i class="cx">160 cm</i><i class="cy">75 cm</i></figure></div>
+<div class="hero"><div><span class="eq">Equivale a: plataforma e-commerce + pasarela de pago</span><h2>Muebles de pino y eucalipto, directo de fábrica</h2><p>Elegí, pagá y recibí en la fecha y franja que prefieras.</p><button class="go" onclick="document.getElementById('grid').scrollIntoView({behavior:'smooth'})">Ver catálogo</button></div><figure class="hf"><svg viewBox="0 0 200 200" role="img" aria-label="Sección de un tronco con anillos de crecimiento"><circle cx="100" cy="100" r="96" fill="#5A3A22"/><circle cx="100" cy="102" r="88" fill="#D4A768"/><g fill="none" stroke="#A9783F" stroke-width="1.6"><circle cx="100" cy="102" r="76"/><circle cx="100" cy="103" r="64"/><circle cx="100" cy="103" r="52"/><circle cx="100" cy="104" r="40"/><circle cx="100" cy="104" r="28"/><circle cx="100" cy="105" r="16"/></g><circle cx="100" cy="105" r="4" fill="#7A4E2A"/><path d="M104 104L176 92" stroke="#6B4423" stroke-width="2" stroke-linecap="round"/></svg></figure></div>
 <div class="diff"><div class="dc"><b>Sin intermediarios</b><span>Compra directa a la fábrica, con entrega en la fecha y franja que elegís.</span></div><div class="dc"><b>Revendedores que ganan</b><span>Cada QR identifica al revendedor que trajo la venta y le paga comisión.</span></div><div class="dc"><b>Pedido que se coordina solo</b><span>Stock, producción y entrega se actualizan automáticamente.</span></div></div>
 <div class="shop"><div class="grid" id="grid"></div>
 <div class="box side"><b>Tu pedido</b><div id="cl"></div>
@@ -25,7 +25,7 @@
 </section>
 <section class="sec" id="s3" hidden>
 <h2>Panel de resultados</h2><span class="eq">Equivale a: planilla o tablero + QR dinámico</span>
-<div class="note"><b>Cómo leer este panel.</b> Cada tarjeta compara un resultado de la solución con la meta del desafío. <span class="bd ok">En meta</span> ya la alcanzó, <span class="bd mid">En camino</span> todavía no, <span class="bd no">Sin datos</span> aún no hay pedidos para medirla. Es una simulación: hacé pedidos en la Tienda y mirá cómo se mueven los números.</div>
+<div class="note">Cada anillo compara un resultado con la meta del desafío. Es una simulación: hacé pedidos en la Tienda y mirá cómo se mueven los números.</div>
 <div class="kg" id="k"></div>
 <div class="box"><b>Inventario (control de stock)</b> <small id="sa"></small><div style="overflow-x:auto"><table><tr><th>Producto</th><th>Stock</th><th>Estado</th><th></th></tr><tbody id="inv"></tbody></table></div><small>Cada pedido descuenta stock automáticamente y el sistema avisa cuando quedan 3 unidades o menos.</small></div>
 <div class="box"><b>Pedidos</b><div style="overflow-x:auto"><table><tr><th>N.º</th><th>Cliente</th><th>Total</th><th>Estado</th><th>Entrega</th></tr><tbody id="ot"></tbody></table></div></div>
@@ -36,18 +36,9 @@
 <section class="sec" id="s4" hidden>
 <h2>App móvil del cliente</h2><span class="eq">Equivale a: app móvil (prototipo)</span>
 <p><small>Así compra y sigue su pedido el cliente desde el celular. Usa los mismos datos de la tienda: stock, carrito y pedidos.</small></p>
-<div class="phone"><div class="scr" id="ap"></div><div class="tb" id="tb"></div></div>
+<div class="phone"><div class="stp" id="st"></div><div class="scr" id="ap"></div><div class="tb" id="tb"></div></div>
 </section>
 <p><small>Prototipo demostrativo con datos y precios ficticios, para un caso simulado.</small></p>
-</main>
-<button id="fab" aria-label="Abrir chat de ayuda"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M8.5 11.5h7M8.5 14.5h4"/></svg></button>
-<div id="cw" hidden role="dialog" aria-label="Asistente conversacional">
-<div class="cwh"><div class="av">MN</div><div><b>Asistente de Fábrica a tu Casa</b><small>En línea · responde al instante</small></div><button id="cx" aria-label="Cerrar chat">&times;</button></div>
-<div id="ch"></div><div id="qr"></div>
-<div class="row"><input id="in" placeholder="Escribí tu consulta…" onkeydown="if(event.key==='Enter')free()"><button class="go" onclick="free()">Enviar</button></div>
-<small class="eqc">Equivale a: ManyChat en WhatsApp o Instagram</small></div>
-<div id="toast" hidden></div>
-<script src="app.js"></script></body></html>
 </main>
 <button id="fab" aria-label="Abrir chat de ayuda"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M8.5 11.5h7M8.5 14.5h4"/></svg></button>
 <div id="cw" hidden role="dialog" aria-label="Asistente conversacional">
